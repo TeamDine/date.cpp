@@ -1,5 +1,3 @@
-# date.cpp
-///Implementación de la clase Fecha
 #include "date.h"
 
 using namespace std;
@@ -21,7 +19,7 @@ bool Date::isValidDate(const int&y, const int&m, const int&d) {
     time (&rawtime);
     timeinfo = localtime(&rawtime);
     unsigned short daysInMonth[] = {0,31,28,31,30,31,30,31,31,30,31,30,31} ;
-    if(y == 0 or y < 1900 or y > timeinfo->tm_year or m < 1 or day < 1 or m > 12){
+    if(y == 0 or y < 1900 or y < timeinfo->tm_year or m < 1 or day < 1 or m > 12){
         return false;
     }
 
